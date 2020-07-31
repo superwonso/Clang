@@ -1,11 +1,15 @@
 #include <stdio.h>
 int main(void)
 {
-    int n,m;
-    scanf("%d %d",&n,&m);
-    printf("%d\n",n/m);
-    printf("%d",n%m);
+    float a,b;
+    int n;
+    scanf("%d %d %d",&a,&b,&n);
+    float c=a/b;
+    for (int i=0; i<n; i++)
+    {
+        a=a*10;
 
-    return 0;
+    }
+    printf("%d",a);
 }
 // =는 대입, ==는 같음비교. 
