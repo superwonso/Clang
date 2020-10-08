@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void calc(int comp);
+int calc(int comp);
 int main(void)
 {
     int num,input;
@@ -14,7 +14,7 @@ int main(void)
 return 0;
 }
 
-void calc(int comp)
+int calc(int comp)
 {
     int a;
     int sum=0;
