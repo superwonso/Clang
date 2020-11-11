@@ -1,3 +1,7 @@
-/*.exe
-/*.txt
-/*.dat
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.bat
