@@ -75,12 +75,11 @@ void start()
     for (i=0; i<25; i++)
     {
         swap(&randarr[i],&randarr[rand()%25]);
-        for(i=0,k=0; i<5; i++)
-        {
-            for(j=0;j<5;j++)
-            user[i][j]=randarr[k++];
-        }
-
+    }
+    for(i=0,k=0; i<5; i++)
+    {
+        for(j=0;j<5;j++)
+        user[i][j]=randarr[k++];
     }
     
     //숫자 저장판 초기화
