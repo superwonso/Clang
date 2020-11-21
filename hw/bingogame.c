@@ -28,7 +28,7 @@ int main()
     printf("\n 숫자를 선택하세요:");
     userselect(); // 사용자 숫자 선택
     selectednumber(); // 선택된 숫자의 처리
-    system("cls");
+    system("cls"); // cmd cls... 리눅스나 맥에서는 "clear"
     printarr(user);
     printf("\n 사용자가 [%d]를 선택하였습니다. \n",checked[count-1]);
     turn ++;
@@ -81,7 +81,11 @@ void start()
         for(j=0;j<5;j++)
         user[i][j]=randarr[k++];
     }
-    
+    for(int m=0,n=0; m<5; m++)
+    {
+        for(int o=0;o<5;o++)
+        user[m][o]=randarr[n++];
+    }
     //숫자 저장판 초기화
     for(i=0; i<25; i++)
     checked[i]=0;
@@ -120,8 +124,10 @@ void computerselect() // 컴퓨터 숫자 선택
         computerselectnum=(rand()%25)+1;//숫자를 임의로 발생시키고
         flag=0;
         for(i=0;i<count;i++)
+        {
         if (checked[i] == computerselectnum)//이미 존재하면 표시
         flag=1;
+        }
 
         if(flag==0)//존재하지 않으면
         {
@@ -143,8 +149,10 @@ void userselect()//유저의 숫자 선택
         flag=1;
 
         for(i=0;i<count;i++) // 이미 존재하는지 확인
+        {
         if(checked[i]==userselectnum)
         flag=1;
+        }
         if(flag==0)//존재하지 않으면
         {
             checked[count++]=userselectnum; //숫자를 넣고 count 증가
