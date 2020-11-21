@@ -71,7 +71,7 @@ void start()
         randarr[i] = i+1; // 임시 배열에 1~25의 수를 넣음
     }
 
-    //컴퓨터 숫자판 초기화
+    //유저 숫자판 초기화
     for (i=0; i<25; i++)
     {
         swap(&randarr[i],&randarr[rand()%25]);
@@ -81,10 +81,15 @@ void start()
         for(j=0;j<5;j++)
         user[i][j]=randarr[k++];
     }
+    //컴퓨터 숫자판 초기화
+    for (i=0; i<25; i++)
+    {
+        swap(&randarr[i],&randarr[rand()%25]);
+    }
     for(int m=0,n=0; m<5; m++)
     {
         for(int o=0;o<5;o++)
-        user[m][o]=randarr[n++];
+        computer[m][o]=randarr[n++];
     }
     //숫자 저장판 초기화
     for(i=0; i<25; i++)
