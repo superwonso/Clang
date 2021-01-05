@@ -2,7 +2,7 @@
 int main(void)
 {
     float a,b;
-    int n;
+    float n;
     scanf("%d %d %d",&a,&b,&n);
     float c=a/b;
     for (int i=0; i<n; i++)
